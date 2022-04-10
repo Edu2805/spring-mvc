@@ -30,7 +30,7 @@ public class Product implements Serializable {
     private String name;
     @Column(nullable = false, length = 100)
     private String description;
-    private LocalDate releaseDate;
+    private LocalDate releaseDate = LocalDate.now();
     @Column(nullable = false)
     private BigDecimal value;
 }

@@ -8,24 +8,26 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDto {
+public class ProductUpdateDto {
 
     private String name;
     private String description;
-    private LocalDate releaseDate = LocalDate.now();
+    private LocalDate releaseDate;
     private BigDecimal value;
 
-    public Product productDtoConverter(){
+    public Product productUpdateDtoConverter(){
         Product product = new Product();
 
         product.setName(this.name);
         product.setDescription(this.description);
-        product.setReleaseDate(this.releaseDate);
+        product.setReleaseDate(product.getReleaseDate());
         product.setValue(this.value);
 
         return product;

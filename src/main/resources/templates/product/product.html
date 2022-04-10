@@ -13,6 +13,7 @@
     <table class="table">
         <thead class="tab-header">
             <tr>
+                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Data de criação</th>
@@ -21,6 +22,7 @@
         </thead>
         <tbody>
             <tr th:each="product : ${products}">
+                <th class="col-2" scope="row" th:text="${product.id}"></th>
                 <th class="col-2" scope="row" th:text="${product.name}"></th>
                 <th class="col-3" scope="row" th:text="${product.description}"></th>
                 <th class="col-4" scope="row" th:text="${product.releaseDate}"></th>
