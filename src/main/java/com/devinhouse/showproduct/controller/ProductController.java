@@ -103,9 +103,4 @@ public class ProductController {
     public ModelAndView showDelete(){
         return new ModelAndView("product/delete");
     }
-
-    @GetMapping("/login")
-    public ModelAndView login(){
-        return new ModelAndView("product/login");
-    }
 }

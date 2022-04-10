@@ -1,5 +1,6 @@
 package com.devinhouse.showproduct.model;
 
+import com.devinhouse.showproduct.model.securityModel.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,4 +34,7 @@ public class Product implements Serializable {
     private LocalDate releaseDate = LocalDate.now();
     @Column(nullable = false)
     private BigDecimal value;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 }
